@@ -7,7 +7,6 @@ use Carbon\Carbon;
 use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
-use File;
 
 class ReportController extends Controller
 {
@@ -123,18 +122,6 @@ class ReportController extends Controller
             $view = view('report.index', $data);
             echo $view->render();
         }, 'example.php');
-
-        // $name = 'index.html';
-
-        // $disposition = $response->headers->makeDisposition(
-        //     ResponseHeaderBag::DISPOSITION_ATTACHMENT,
-        //     $name,
-        //     str_replace('%', '', Str::ascii($name))
-        // );
-
-        // $response->headers->set('Content-Disposition', $disposition);
-
-        // return $response;
     }
 
 }
